@@ -47,3 +47,11 @@ Step 10 : Access Jenkins:
 - Open a web browser and navigate to http://your_server_ip_or_domain:8080
 
 - Login with the password obtained in Step 9
+
+- Install the suggested plugins provided by Jenkins.
+- Wait for the plugin installation to complete.
+- Create a user account for Jenkins.
+- Configure the Jenkins URL according to your server's setup.
+- Jenkins is now ready for use! Click "Start using Jenkins."
+
+Congratulations, you have successfully installed and configured Jenkins on Ubuntu 23.10!
