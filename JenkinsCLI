@@ -1,0 +1,49 @@
+
+Step 1 : Update your package list to ensure you have the latest information about available packages:
+
+sudo apt update
+
+
+Step 2 : Install the default JDK (Java Development Kit) which is required for running Jenkins:
+
+ sudo apt install default-jdk
+
+Step 3 : Add the Jenkins repository key to your system:
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+Step 4 : Add the Jenkins repository to your system's package sources:
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+Step 5 : Update your package list again to include the new Jenkins repository:
+
+sudo apt update
+
+Step 6 : Install Jenkins using the package manager:
+
+sudo apt install jenkins
+
+
+Step 7 : Start the Jenkins service:
+
+sudo systemctl start jenkins
+
+
+Step 8 : Enable Jenkins to start on boot:
+
+sudo systemctl enable jenkins
+
+
+Step 9 : Retrieve the initial admin password needed for the Jenkins setup:
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Step 10 : Access Jenkins:
+
+- Open a web browser and navigate to http://your_server_ip_or_domain:8080
+
+- Login with the password obtained in Step 9
